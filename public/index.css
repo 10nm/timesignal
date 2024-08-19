@@ -1,0 +1,22 @@
+body, html {
+    height: 100%;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+#time {
+    font-size: 8em;
+    color: #363636;
+    font-weight: bold;
+    text-align: center;;
+}

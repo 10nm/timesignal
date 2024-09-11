@@ -1,5 +1,7 @@
 # TimeSignal
 
+運用中: https://time.saba.run
+
 ## How to use
 
 `node index.js`  

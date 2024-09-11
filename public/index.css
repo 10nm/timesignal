@@ -12,7 +12,7 @@ body, html {
     align-items: center;
     height: 100%;
     width: 100%;
-    font-family: "arial";
+    font-family:  "arial", "Roboto Mono", monospace;
 }
 
 #time {

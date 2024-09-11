@@ -12,6 +12,7 @@ body, html {
     align-items: center;
     height: 100%;
     width: 100%;
+    font-family: "arial";
 }
 
 #time {
@@ -19,4 +20,11 @@ body, html {
     color: #363636;
     font-weight: bold;
     text-align: center;;
+}
+
+/* 画面幅が600px以下の場合のフォントサイズ調整 */
+@media (max-width: 600px) {
+    #time {
+        font-size: 20vw; 
+    }
 }

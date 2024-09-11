@@ -1,4 +1,18 @@
 
+function howread (time, AMPM) {
+    matubi2 = time.slice(-2);
+    sentou4 = time.slice(0, 4)
+    
+    let speech;
+    if (matubi2 == "00") {
+        speech = new SpeechSynthesisUtterance(`${AMPM} 、 ${sentou4} ちょうど をお知らせします`);
+    } else {
+        speech = new SpeechSynthesisUtterance(`${AMPM} 、 ${time} をお知らせします`);
+    }
+    return speech;
+}
+
+
 function speech (currentTime) {
     const AMPM = currentTime.getHours() < 12 ? '午前' : '午後';
     const timeInMilliseconds = currentTime.getTime();
@@ -6,7 +20,9 @@ function speech (currentTime) {
 
     let time = new Date(timeInMillisecondsPlus3s)
     time = time.toLocaleTimeString("en").toString().slice(0, -3);
-    let speech = new SpeechSynthesisUtterance(`${AMPM} 、 ${time} をお知らせします`);
+
+    let speech = howread(time, AMPM)
+
     speech.rate = 1.5;
     speech.volume = 0.7;
 
